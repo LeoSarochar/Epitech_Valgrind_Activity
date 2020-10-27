@@ -25,12 +25,11 @@ void my_putstr(char *str)
 }
 int main(void)
 {
-    char *str = malloc(sizeof(char) * 4);
+    char *str = malloc(sizeof(char) * 3);
 
     str[0] = 'Y';
     str[1] = 'E';
     str[2] = 'S';
-    str[3] = '\0';
     my_putstr(str);
 }
 // SORTIE ATTENDUE : YES

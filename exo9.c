@@ -24,42 +24,12 @@ void my_putstr(char *str)
     write(1, str, my_strlen(str));
 }
 
-void my_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
-char *my_strdup(char *str)
-{
-    int len = my_strlen(str);
-    char *new_str = malloc(sizeof(char) * (len + 1));
-    
-    for (int i = 0; str[i]; i++) {
-        new_str[i] = str[i];
-    }
-    new_str[len] = '\0';
-    return (new_str);
-}
-
-// This function replace all occurencies of char to_replace by char c in string str
-char *my_replace_char(char *str, char to_replace, char c)
-{
-    int len = my_strlen(str);
-
-    for (int i = 0; i <= len + i; i++) {
-        if (str[i] == to_replace) {
-            str[i] = c;
-        }
-    }
-    return (str);
-}
-
 int main(void) {
-    char *str1 = "Hello World";
+    int nb_ints = 4;
+    int *int_arr = malloc(sizeof(int) * nb_ints + 1);
     
-    str1 = my_replace_char(my_strdup(str1), 'l', 'A');
-    my_putstr(str1);
-    my_putchar('\n');
+    for (int i = 0; i <= nb_ints; i++) {
+        int_arr[i] = i;
+    }
     return (0);
 }
-// SORTIE ATTENDUE : HeAA WorAd\n
